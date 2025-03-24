@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "f868dcf5263619d6",
+    "id": "614e7fc95f37677a",
     "type": "split",
     "children": [
       {
-        "id": "efb1ab2629690498",
+        "id": "dea43c2060dd7e06",
         "type": "tabs",
         "children": [
           {
-            "id": "2d625075d6613b76",
+            "id": "603b06056ef94b25",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Twin-B/Research Questions/3 Optimization Research Question(2).md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "3 Optimization Research Question(2)"
+              "title": "แท็บใหม่"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "51e64e19ea9679b4",
+    "id": "125be82706b0a209",
     "type": "split",
     "children": [
       {
-        "id": "b68f280097d9d993",
+        "id": "4424f231c28a7aae",
         "type": "tabs",
         "children": [
           {
-            "id": "cd48250c04ca1297",
+            "id": "1d0c66cccc3a435c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +44,7 @@
             }
           },
           {
-            "id": "8c3e5bc25ba62e13",
+            "id": "a24e6016322f7e25",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,11 +57,11 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "ค้นหา"
             }
           },
           {
-            "id": "9ab14c0388322610",
+            "id": "31ee7153a44f93b7",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,20 +77,19 @@
     "width": 300
   },
   "right": {
-    "id": "bfcfb3ba18f094af",
+    "id": "d3eebe2eb857e282",
     "type": "split",
     "children": [
       {
-        "id": "cbb3d4b816734c39",
+        "id": "6d22cb9672f717c7",
         "type": "tabs",
         "children": [
           {
-            "id": "42948cf002d949f0",
+            "id": "3553f0899942cd6a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Twin-B/Research Questions/3 Optimization Research Question(2).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +99,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 3 Optimization Research Question(2)"
+              "title": "แบ็คลิงค์"
             }
           },
           {
-            "id": "23c2890c1d2f2d90",
+            "id": "0dab6a25e32d6402",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Smart Energy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Smart Energy"
+              "title": "ลิงค์ขาออก"
             }
           },
           {
-            "id": "c8453354a4bf977c",
+            "id": "67da59a06b0a09ef",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,18 +131,17 @@
             }
           },
           {
-            "id": "e23506fab6f12f1b",
+            "id": "a08ec846118fe3ad",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Smart Energy.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Smart Energy"
+              "title": "โครงเรื่อง"
             }
           }
         ]
@@ -162,34 +155,12 @@
     "hiddenItems": {
       "switcher:เปิด quick switcher": false,
       "graph:เปิดมุมมองกราฟ": false,
+      "canvas:Create new canvas": false,
       "daily-notes:เปิดโน้ตของวันนี้": false,
       "templates:แทรกเทมเพลต": false,
-      "command-palette:เปิดกระดานคำสั่ง": false,
-      "canvas:Create new canvas": false
+      "command-palette:เปิดกระดานคำสั่ง": false
     }
   },
-  "active": "2d625075d6613b76",
-  "lastOpenFiles": [
-    "Twin-B/Research Questions/3 Optimization Research Question(1).md",
-    "Twin-B/Research Questions/3 Optimization Research Question(2).md",
-    "Twin-B/Research Questions/1 Problem Understanding.md",
-    "Pasted image 20250323151430.png",
-    "Pasted image 20250323151017.png",
-    "Twin-B/Research Questions/2 Quantifiable Research Question.md",
-    "Images/Pasted image 20250323133501.png",
-    "Digital Twin.md",
-    "Smart Energy Digital Twin.md",
-    "Smart Energy.md",
-    "Images/Pasted image 20250323141640.png",
-    "Images",
-    "Images/Pasted image 20250323141134.png",
-    "Images/Pasted image 20250323141124.png",
-    "Images/Pasted image 20250323141114.png",
-    "Images/Pasted image 20250323141050.png",
-    "Images/Pasted image 20250323140943.png",
-    "Images/Pasted image 20250323140838.png",
-    "Twin-B/Reserch/Untitled",
-    "Twin-B/Research Questions",
-    "Twin-B"
-  ]
+  "active": "603b06056ef94b25",
+  "lastOpenFiles": []
 }
