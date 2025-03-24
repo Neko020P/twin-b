@@ -1,0 +1,94 @@
+---
+tags: 
+source:
+---
+#summary #researchquestion 
+
+# Objectives
+
+1. To develop a model of the structure and energy consumption behavior in the Boonchupanitthan building for university executives to study energy-saving strategies.
+2. To study methods for reducing electricity costs and saving energy at the university.
+3. To create a tool that helps analyze and identify high-energy usage areas based on simulated scenarios derived from energy usage data extracted from historical data.
+4. To assess the accuracy of the model through simulations using historical data.
+
+# Optimization Research Question
+
+**O1** : To develop a model of the structure and energy consumption behavior
+
+- **RQ1** : Can Digital twin reduce the electricity consumption of the Boonchupanitthan building by what percentage, while maintaining a user comfort score of at least 80/100?
+
+**O2** : To study methods for reducing electricity costs and saving energy
+
+- **RQ2** : What percentage of energy load reduction can be achieved by an AI-based HVAC control system compared to manual settings in different climate zones?
+- **RQ3** : By what percentage can Reinforcement Learning (DDPG vs. Q-Learning) reduce energy costs compared to Rule-Based Control?
+
+**O3** : To create a tool that helps analyze and identify high-energy usage areas
+
+- **RQ6** : How accurately can AI-Based Clustering (K-Means vs. DBSCAN) identify high energy usage areas compared to using historical averages?
+
+**O4** : To assess the accuracy of the model through simulations using historical data
+
+- **RQ4** : What is the predictive accuracy of Digital Twin's machine learning algorithm for energy consumption behavior using a validated statistical method?
+- **RQ9** : How do digital twin models with a 5% accuracy loss compare to baseline models in terms of computational efficiency and reliability?
+
+
+# Research Question
+### **1. Energy Usage Behavior Simulation with Agent-Based Modeling**
+
+- **Objective O1**: This method helps simulate and model the energy consumption behavior in the building, which is crucial for understanding how energy is being used.
+
+- **RQ1:** How much can the use of a Digital Twin reduce electricity consumption in the Boonchupanitthan building while maintaining user comfort scores of at least 80/100?
+- **RQ2:** How much can an AI-driven HVAC control system reduce energy consumption compared to manual settings in different climate zones?
+
+**Research Method:**
+
+- **Using MESA for Agent-Based Modeling (ABM):** Model the behavior of users in the building (students, faculty, staff) by simulating their movement and energy usage behavior based on real data such as Wi-Fi logs or CCTV footage.
+- **Integration with EnergyPlus:** Use EnergyPlus to simulate energy usage within the building, such as HVAC and lighting systems, to assess energy consumption under various scenarios.
+- **Evaluation:** Calculate energy savings and assess user comfort through simulation results.
+
+### **2. Comparison of Energy Control Methods (AI-based HVAC vs. Manual Settings)**
+
+- **Objective O2**: The purpose of this research method is to explore ways to reduce electricity costs and save energy. It focuses on comparing different control systems.
+
+- **RQ2:** How much can an AI-driven HVAC control system reduce energy consumption compared to manual settings in different climate zones?
+- **RQ3:** How much can Reinforcement Learning (DDPG vs. Q-Learning) reduce energy costs compared to Rule-Based control?
+
+**Research Method:**
+
+- **AI-based Control (Reinforcement Learning):** Use reinforcement learning techniques such as DDPG or Q-Learning to control the HVAC system in the building for different climate zones by simulating real-world usage.
+- **Comparison with Manual Control:** Compare energy consumption results between AI-controlled systems and manually set controls.
+- **Scenario Simulation:** Use MESA to simulate HVAC control in various scenarios to evaluate energy savings.
+
+### **3. Energy Consumption Clustering (AI-Based Clustering)**
+
+- **Objective O3**: This method is designed to identify high-energy usage areas, fulfilling the objective of creating a tool for analyzing and pinpointing energy inefficiencies.
+
+- **RQ6:** How accurately can AI-Based Clustering (K-Means vs. DBSCAN) identify high-energy usage areas compared to historical average methods?
+
+**Research Method:**
+
+- **AI-based Clustering (K-Means vs. DBSCAN):** Use clustering techniques to analyze and identify areas with high energy consumption.
+- **Comparison of Results:** Compare the accuracy of identifying high-energy areas between K-Means and DBSCAN against traditional methods, such as historical averages.
+
+### **4. Model Accuracy Assessment**
+
+- **Objective O4**: This method focuses on validating the accuracy of the energy consumption model using historical data, ensuring that the Digital Twin model performs reliably.
+
+- **RQ4:** What is the prediction accuracy of the Digital Twin machine learning algorithm for energy consumption behavior using statistically validated methods?
+- **RQ9:** How does a Digital Twin model with a 5% deviation compare to the baseline model in terms of computational performance and reliability?
+
+**Research Method:**
+
+- **Machine Learning and Statistical Methods:** Use machine learning algorithms to assess the accuracy of the Digital Twin model, employing validated statistical techniques (e.g., Cross-Validation, MAPE, RMSE) to evaluate accuracy.
+- **Model Comparison:** Compare the performance of the Digital Twin model with a 5% deviation against the baseline model, using performance and reliability metrics derived from simulations.
+
+### **5. Use of HPC to Enhance Computational Efficiency**
+
+- **Objective O4**: This method is crucial for enhancing computational efficiency when processing complex energy models, addressing the need for faster and more reliable simulations.
+
+- **RQ9:** How does a Digital Twin model with a 5% deviation compare to the baseline model in terms of computational performance and reliability?
+
+**Research Method:**
+
+- **Using HPC (LANTA):** Use HPC tools for processing complex models such as Twin-B, simulating different scenarios to reduce energy consumption and adjust project variables.
+- **Evaluation of Computational Results:** Compare computational performance between using HPC and non-HPC methods for processing.
