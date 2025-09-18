@@ -1,0 +1,6 @@
+input_file: File does not exist:  
+Run with --help for more information.
+/var/spool/slurmd/job2844511/slurm_script: line 22: -w: command not found
+✅ EnergyPlus finished. Outputs are in /project/lt200291-ignite/Project_chomwong/test/runs/run7
+✅ Exported /project/lt200291-ignite/Project_chomwong/test/runs/run7/run7_temperature.csv with 102486 rows
+✅ Postprocessing finished. CSV is in /project/lt200291-ignite/Project_chomwong/test/runs/run7

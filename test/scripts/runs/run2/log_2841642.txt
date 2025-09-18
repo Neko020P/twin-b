@@ -1,0 +1,2 @@
+/var/spool/slurmd/job2841642/slurm_script: line 9: cd: /path/to/project: No such file or directory
+/var/spool/slurmd/job2841642/slurm_script: line 12: ./bin/energyplus: No such file or directory

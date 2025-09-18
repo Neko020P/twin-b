@@ -1,0 +1,23 @@
+Index(['Date/Time',
+       'Environment:Site Outdoor Air Drybulb Temperature [C](TimeStep)',
+       'WESTDATACENTER_EQUIP:ITE CPU Electricity Rate [W](Hourly)',
+       'WESTDATACENTER_EQUIP:ITE Fan Electricity Rate [W](Hourly)',
+       'WESTDATACENTER_EQUIP:ITE UPS Electricity Rate [W](Hourly)',
+       'WESTDATACENTER_EQUIP:ITE CPU Electricity Rate at Design Inlet Conditions [W](Hourly)',
+       'WESTDATACENTER_EQUIP:ITE Fan Electricity Rate at Design Inlet Conditions [W](Hourly)',
+       'WESTDATACENTER_EQUIP:ITE UPS Heat Gain to Zone Rate [W](Hourly)',
+       'WESTDATACENTER_EQUIP:ITE Total Heat Gain to Zone Rate [W](Hourly)',
+       'WESTDATACENTER_EQUIP:ITE Standard Density Air Volume Flow Rate [m3/s](Hourly)',
+       ...
+       'EAST ZONE CCOIL AIR OUTLET NODE:System Node Temperature [C](TimeStep)',
+       'EAST AIR LOOP OUTLET NODE:System Node Temperature [C](TimeStep)',
+       'WEST ZONE RETURN AIR NODE:System Node Temperature [C](TimeStep)',
+       'WEST ZONE RETURN AIR NODE:System Node Mass Flow Rate [kg/s](TimeStep)',
+       'WEST ZONE MIXED AIR NODE:System Node Temperature [C](TimeStep)',
+       'WEST ZONE MIXED AIR NODE:System Node Mass Flow Rate [kg/s](TimeStep)',
+       'WEST ZONE SUPPLY FAN OUTLET NODE:System Node Temperature [C](TimeStep)',
+       'EAST ZONE SUPPLY FAN OUTLET NODE:System Node Temperature [C](TimeStep)',
+       'WEST IEC SECONDARY AIR OUTLET NODE:System Node Temperature [C](TimeStep)',
+       'WEST IEC SECONDARY AIR OUTLET NODE:System Node Mass Flow Rate [kg/s](TimeStep) '],
+      dtype='object', length=130)
+✅ Saved filtered CSV to /project/lt200291-ignite/Project_chomwong/test/runs/run7/2Zone_ZoneAirTemp.csv

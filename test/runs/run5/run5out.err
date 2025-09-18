@@ -1,0 +1,17 @@
+Program Version,EnergyPlus, Version 25.1.0-1c11a3d85f, YMD=2025.08.27 01:18,
+   ** Severe  ** <root>[BuildingSurface:Detailed][Room7301_Ceiling][number_of_vertices] - "0" - Expected number greater than or equal to 3.000000
+   ** Severe  ** <root>[BuildingSurface:Detailed][Room7301_Ceiling][number_of_vertices] - Failed to validate against child schema #0.
+   ** Severe  ** <root>[BuildingSurface:Detailed][Room7301_Ceiling][number_of_vertices] - "0" - Failed to match against any enum values.
+   ** Severe  ** <root>[BuildingSurface:Detailed][Room7301_Ceiling][number_of_vertices] - Failed to validate against child schema #1.
+   ** Severe  ** <root>[BuildingSurface:Detailed][Room7301_Ceiling][number_of_vertices] - Failed to validate against any schemas allowed by anyOf constraint.
+   ** Severe  ** <root>[BuildingSurface:Detailed][Room7301_Ceiling][sun_exposure] - "WindExposed" - Failed to match against any enum values.
+   ** Severe  ** <root>[BuildingSurface:Detailed][Room7301_Ceiling][vertices][3] - Missing required property 'vertex_z_coordinate'.
+   **  Fatal  ** Errors occurred on processing input file. Preceding condition(s) cause termination.
+   ...Summary of Errors that led to program termination:
+   ..... Reference severe error count=7
+   ..... Last severe error=<root>[BuildingSurface:Detailed][Room7301_Ceiling][vertices][3] - Missing required property 'vertex_z_coordinate'.
+   ************* Warning:  Node connection errors not checked - most system input has not been read (see previous warning).
+   ************* Fatal error -- final processing.  Program exited before simulations began.  See previous error messages.
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Terminated--Fatal Error Detected. 0 Warning; 7 Severe Errors; Elapsed Time=00hr 00min  0.15sec

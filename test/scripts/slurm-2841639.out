@@ -1,0 +1,2 @@
+/var/spool/slurmd/job2841639/slurm_script: line 15: ./bin/energyplus: No such file or directory
+EnergyPlus finished. Outputs are in runs/run2

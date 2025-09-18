@@ -1,0 +1,13 @@
+EnergyPlus Starting
+EnergyPlus, Version 25.1.0-1c11a3d85f, YMD=2025.08.27 00:55
+**FATAL:Errors occurred on processing input file. Preceding condition(s) cause termination.
+EnergyPlus Run Time=00hr 00min  0.40sec
+Program terminated: EnergyPlus Terminated--Error(s) Detected.
+✅ EnergyPlus finished. Outputs are in /project/lt200291-ignite/Project_chomwong/test/runs/run5
+Traceback (most recent call last):
+  File "/project/lt200291-ignite/Project_chomwong/test/scripts/postprocess.py", line 45, in <module>
+    eso_to_csv(args.eso, args.out)
+  File "/project/lt200291-ignite/Project_chomwong/test/scripts/postprocess.py", line 7, in eso_to_csv
+    raise FileNotFoundError(f"❌ ไม่พบไฟล์ {eso_file}")
+FileNotFoundError: ❌ ไม่พบไฟล์ /project/lt200291-ignite/Project_chomwong/test/runs/run5/run5out.eso
+✅ Postprocessing finished. CSV is in /project/lt200291-ignite/Project_chomwong/test/runs/run5
