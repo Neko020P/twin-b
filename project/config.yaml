@@ -1,0 +1,14 @@
+energyplus:
+  csv_file: "../test/runs/run7/2Zone_ZoneAirTemp.csv"
+  timestep: 60  # minutes per step
+
+mesa:
+  steps: 200
+  zones: ["West Zone", "East Zone"]
+  agents:
+    students: 100
+    staff: 20
+    cleaners: 10
+    wardens: 5
+    visitors: 5
+  total_agents: 140
