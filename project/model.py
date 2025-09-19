@@ -1,3 +1,4 @@
+# model.py
 from mesa import Model
 from mesa.time import RandomActivation
 from mesa.datacollection import DataCollector
@@ -10,13 +11,9 @@ class BuildingModel(Model):
         self.config = config
         self.current_step = 0
 
-        # โหลด EnergyPlus CSV
         self.energy_data = pd.read_csv(config["energyplus"]["csv_file"])
-
-        # สร้าง list เก็บผลลัพธ์ agent
         self.agent_results = []
 
-        # สร้าง agent
         agent_types = {
             "students": StudentAgent,
             "staff": StaffAgent,
@@ -25,12 +22,25 @@ class BuildingModel(Model):
             "visitors": VisitorAgent
         }
 
-        uid = 0
-        for atype, cls in agent_types.items():
-            for _ in range(config["mesa"]["agents"][atype]):
-                agent = cls(uid, self)
-                self.schedule.add(agent)
-                uid += 1
+        uid_list = config.get("mesa", {}).get("agent_ids", None)
+        if uid_list is not None:
+            # สำหรับ distributed simulation: สร้าง agent ตาม uid partition ของ rank
+            idx = 0
+            for atype, cls in agent_types.items():
+                n_agents = config["mesa"]["agents"].get(atype, 0)
+                for _ in range(n_agents):
+                    if idx < len(uid_list):
+                        agent = cls(uid_list[idx], self)
+                        self.schedule.add(agent)
+                        idx += 1
+        else:
+            # fallback: สร้างทุก agent
+            uid = 0
+            for atype, cls in agent_types.items():
+                for _ in range(config["mesa"]["agents"].get(atype, 0)):
+                    agent = cls(uid, self)
+                    self.schedule.add(agent)
+                    uid += 1
 
         self.datacollector = DataCollector(
             model_reporters={
@@ -41,7 +51,6 @@ class BuildingModel(Model):
 
     def get_current_temp(self, zone_name):
         if self.current_step < len(self.energy_data):
-            # สมมติ column 1=West Zone, 2=East Zone
             if zone_name == "West Zone":
                 return self.energy_data.iloc[self.current_step, 1]
             elif zone_name == "East Zone":
