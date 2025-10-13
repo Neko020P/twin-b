@@ -1,0 +1,149 @@
+#!/usr/bin/env python3
+"""
+Distributed Mesa simulation using PyTorch process group for sync/collect.
+"""
+
+import random
+from mesa import Agent
+
+class BaseAgent(Agent):
+    def __init__(self, unique_id, model):
+        super().__init__(unique_id, model)
+        
+    def log_step(self, role, room, temp=None, action=None):
+        occupant_count = sum(
+            1 for a in self.model.schedule.agents
+            if hasattr(a, "current_room") and a.current_room == room
+        )
+    
+        entry = {
+            "step": self.model.current_step,
+            "datetime": self.model.get_datetime(),
+            "agent_id": self.unique_id,
+            "agent_type": role,
+            "room": room,
+            "occupant_count": occupant_count   
+        }
+        if temp is not None:
+            entry["current_temp"] = round(temp,2)
+        if action is not None:
+            entry["action"] = action
+        if role != "policy":
+            entry["comfort_level"] = round(abs(temp - self.preferred_temp),2) if temp is not None else None
+            entry["using_ac"] = temp > self.preferred_temp if temp is not None else None
+            entry["preferred_temp"] = round(self.preferred_temp,2)
+        else:
+            entry["preferred_temp"] = round(self.preferred_temp,2)
+    
+        self.model.agent_results.append(entry)
+
+    # def log_step(self, role, room, temp=None, action=None):
+    #     """บันทึกผล comfort/action ของ agent"""
+    #     entry = {
+    #         "step": self.model.current_step,
+    #         "agent_id": self.unique_id,
+    #         "agent_type": role,
+    #         "room": room
+    #     }
+    #     if temp is not None:
+    #         entry["current_temp"] = round(temp,2)
+    #     if action is not None:
+    #         entry["action"] = action
+    #     if role != "policy":
+    #         entry["comfort_level"] = round(abs(temp - self.preferred_temp),2) if temp is not None else None
+    #         entry["using_ac"] = temp > self.preferred_temp if temp is not None else None
+    #         entry["preferred_temp"] = round(self.preferred_temp,2)
+    #     else:
+    #         entry["preferred_temp"] = round(self.preferred_temp,2)
+
+    #     self.model.agent_results.append(entry)
+
+
+class StudentAgent(BaseAgent):
+    def __init__(self, unique_id, model):
+        super().__init__(unique_id, model)
+        self.role = "student"
+        self.preferred_temp = random.uniform(24,26)
+        self.comfort_tolerance = random.uniform(1.5,2.5)
+        self.current_room = random.choice(model.config["mesa"]["zones"])
+
+    def step(self):
+        temp = self.model.get_current_temp(self.current_room)
+        self.log_step(self.role, self.current_room, temp=temp)
+
+
+class StaffAgent(BaseAgent):
+    def __init__(self, unique_id, model):
+        super().__init__(unique_id, model)
+        self.role = "staff"
+        self.preferred_temp = random.uniform(25,27)
+        self.comfort_tolerance = random.uniform(1,2)
+        self.current_room = random.choice(model.config["mesa"]["zones"])
+
+    def step(self):
+        temp = self.model.get_current_temp(self.current_room)
+        self.log_step(self.role, self.current_room, temp=temp)
+
+
+class CleanerAgent(BaseAgent):
+    def __init__(self, unique_id, model):
+        super().__init__(unique_id, model)
+        self.role = "cleaner"
+        self.preferred_temp = random.uniform(26,28)
+        self.comfort_tolerance = random.uniform(2.5,3.5)
+        self.route = model.config["mesa"]["zones"]
+        self.current_room = self.route[0]
+
+    def step(self):
+        temp = self.model.get_current_temp(self.current_room)
+        self.log_step(self.role, self.current_room, temp=temp)
+        # move to next room
+        self.current_room = self.route[(self.route.index(self.current_room)+1) % len(self.route)]
+
+
+class WardenAgent(BaseAgent):
+    def __init__(self, unique_id, model):
+        super().__init__(unique_id, model)
+        self.role = "warden"
+        self.preferred_temp = random.uniform(25,27)
+        self.comfort_tolerance = random.uniform(2,3)
+        self.current_room = random.choice(model.config["mesa"]["zones"])
+
+    def step(self):
+        temp = self.model.get_current_temp(self.current_room)
+        self.log_step(self.role, self.current_room, temp=temp)
+
+
+class VisitorAgent(BaseAgent):
+    def __init__(self, unique_id, model):
+        super().__init__(unique_id, model)
+        self.role = "visitor"
+        self.preferred_temp = random.uniform(24,26)
+        self.comfort_tolerance = random.uniform(1,1.5)
+        self.current_room = random.choice(model.config["mesa"]["zones"])
+
+    def step(self):
+        temp = self.model.get_current_temp(self.current_room)
+        self.log_step(self.role, self.current_room, temp=temp)
+
+
+class PolicyAgent(BaseAgent):
+    def __init__(self, unique_id, model, room):
+        super().__init__(unique_id, model)
+        self.role = "policy"
+        self.current_room = room
+        self.max_delta = 3
+        self.preferred_temp = 25.0
+
+    def step(self):
+        temp = self.model.get_current_temp(self.current_room)
+        if temp is not None:
+            lower = self.preferred_temp - self.max_delta
+            upper = self.preferred_temp + self.max_delta
+            if temp < lower:
+                action = "heat_on"   
+            elif temp > upper:
+                action = "cool_on"  
+            else:
+                action = "hold"
+            self.log_step(self.role, self.current_room, temp=temp, action=action)

@@ -1,0 +1,13 @@
+ ReadVarsESO
+ processing:/project/lt200291-ignite/Project_chomwong/project/EnergyPlus_BP_Boonchoo/2ZoneDataCenterHVAC_wEconomizer.rvi
+ input file:/project/lt200291-ignite/Project_chomwong/project/outEnergyPlus/eplusout.eso
+ output file:/project/lt200291-ignite/Project_chomwong/project/outEnergyPlus/eplusout.csv
+ getting all vars from:/project/lt200291-ignite/Project_chomwong/project/outEnergyPlus/eplusout.eso
+  number variables requested for output=         129
+ ReadVars Run Time=00hr 00min  0.02sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:/project/lt200291-ignite/Project_chomwong/project/EnergyPlus_BP_Boonchoo/2ZoneDataCenterHVAC_wEconomizer.mvi
+ Requested ESO file=/project/lt200291-ignite/Project_chomwong/project/outEnergyPlus/eplusout.mtr
+ does not exist.  ReadVarsESO program terminated.
+ ReadVarsESO program terminated.
