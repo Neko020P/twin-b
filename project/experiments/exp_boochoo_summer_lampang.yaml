@@ -1,0 +1,65 @@
+# Experiment Configuration: Boochoo Resolution Building - Summer Break
+# Scenario: June-August minimal operations
+# Location: Thammasat University Lampang Campus, Thailand
+
+experiment:
+  name: "boochoo_summer_break_lampang"
+  description: "Summer break with 141 agents, minimal academic activity"
+  version: "1.0"
+  created_date: "2025-01-15"
+
+# Building Configuration
+building:
+  name: "Boochoo Resolution Building"
+  idf_file: "path/to/Boochoo_Resolution_Building.idf"
+  zones_config: "zones_boochoo_building.yaml"
+  total_zones: 70
+  floors: 5
+
+# Weather Data
+weather:
+  location: "Lampang, Thailand"
+  epw_file: "THA_NRG_Lampang.Airport.483280_TMYx.2009-2023.epw"
+  wmo_station: "483280"
+  climate_type: "Tropical Savanna (Aw)"
+  description: "Lampang Airport weather data 2009-2023 - Peak summer heat period"
+
+# Agent Configuration
+agents:
+  config_file: "agents_summer_break.json"
+  total_agents: 141
+  agent_types:
+    - undergraduate: 30
+    - graduate: 40
+    - faculty: 15
+    - admin_staff: 20
+    - lab_technician: 10
+    - cleaner: 15
+    - security: 6
+    - visitor: 5
+
+# Simulation Parameters
+simulation:
+  steps: 288
+  start_time: "08:30"
+  end_time: "16:30"
+  timestep_minutes: 5
+  warmup_days: 7
+  simulation_days: 60  # Two-month summer period
+
+# Output Configuration
+output:
+  results_directory: "results/boochoo_summer_lampang"
+  save_agent_results: true
+  save_zone_results: true
+  save_energy_results: true
+  create_visualizations: true
+  export_formats: ["csv", "json"]
+
+# Notes
+notes: |
+  Minimal occupancy during hottest period of the year (March-May in Lampang).
+  Critical test of HVAC efficiency under peak outdoor temperatures (35-40°C).
+  Maximum opportunity for energy conservation strategies.
+  Focus on occupied zones only - potential for selective cooling.
+  Equipment maintenance scheduling window.

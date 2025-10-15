@@ -1,0 +1,222 @@
+{
+  "building_info": {
+    "name": "Boochoo Resolution Building",
+    "location": "Thammasat University Lampang Campus",
+    "floors": 5,
+    "total_zones": 70,
+    "scenario": "Exam Period",
+    "description": "Midterm/final exam weeks with concentrated exam schedules and reduced normal operations"
+  },
+  "agent_types": {
+    "undergraduate": {
+      "distribution": {
+        "count": 500,
+        "gender_ratio": {"female": 0.55, "male": 0.45},
+        "age_range": [18, 23]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 24.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "exam_sessions",
+        "device_usage_pattern": "minimal",
+        "notes": "Lower tolerance during exams due to stress and concentration needs"
+      },
+      "schedule_template": "exam_schedule"
+    },
+    "graduate": {
+      "distribution": {
+        "count": 40,
+        "gender_ratio": {"female": 0.48, "male": 0.52},
+        "age_range": [23, 35]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.0,
+          "std_dev": 1.2
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "research_based",
+        "device_usage_pattern": "continuous"
+      },
+      "schedule_template": "graduate_research"
+    },
+    "faculty": {
+      "distribution": {
+        "count": 45,
+        "gender_ratio": {"female": 0.45, "male": 0.55},
+        "age_range": [30, 65]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 1.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "exam_proctoring",
+        "device_usage_pattern": "intermittent"
+      },
+      "schedule_template": "exam_proctoring"
+    },
+    "admin_staff": {
+      "distribution": {
+        "count": 35,
+        "gender_ratio": {"female": 0.60, "male": 0.40},
+        "age_range": [25, 60]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.5,
+          "std_dev": 0.8
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low_moderate",
+        "movement_pattern": "exam_logistics",
+        "device_usage_pattern": "continuous"
+      },
+      "schedule_template": "exam_support"
+    },
+    "lab_technician": {
+      "distribution": {
+        "count": 10,
+        "gender_ratio": {"female": 0.40, "male": 0.60},
+        "age_range": [25, 55]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 24.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.0,
+          "max": 3.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "equipment_monitoring",
+        "device_usage_pattern": "minimal"
+      },
+      "schedule_template": "lab_maintenance"
+    },
+    "cleaner": {
+      "distribution": {
+        "count": 20,
+        "gender_ratio": {"female": 0.65, "male": 0.35},
+        "age_range": [25, 60]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 27.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.5,
+          "max": 3.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "high",
+        "movement_pattern": "intensive_cleaning",
+        "device_usage_pattern": "low",
+        "notes": "Increased cleaning between exam sessions"
+      },
+      "schedule_template": "exam_cleaning"
+    },
+    "security": {
+      "distribution": {
+        "count": 10,
+        "gender_ratio": {"female": 0.25, "male": 0.75},
+        "age_range": [25, 55]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 26.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.0,
+          "max": 3.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "heightened_patrol",
+        "device_usage_pattern": "monitoring",
+        "notes": "Enhanced security during exam periods"
+      },
+      "schedule_template": "exam_security"
+    },
+    "visitor": {
+      "distribution": {
+        "count": 5,
+        "gender_ratio": {"female": 0.50, "male": 0.50},
+        "age_range": [20, 70]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.0,
+          "std_dev": 1.5
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "minimal",
+        "device_usage_pattern": "short_stay"
+      },
+      "schedule_template": "visitor_pattern"
+    }
+  },
+  "metadata": {
+    "total_agents": 665,
+    "created_for": "Boochoo Resolution Building Co-Simulation",
+    "climate": "Lampang, Thailand (Tropical Savanna)",
+    "version": "1.0",
+    "notes": "Reduced agent count with concentrated occupancy in exam halls. Longer continuous occupancy periods (2-3 hour blocks). Lower comfort tolerance due to stress and concentration requirements."
+  }
+}

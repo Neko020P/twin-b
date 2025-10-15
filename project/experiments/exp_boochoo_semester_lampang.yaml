@@ -1,0 +1,100 @@
+# Experiment Configuration: Boochoo Resolution Building - Normal Semester
+# Scenario: Typical weekday operations during academic semester
+# Location: Thammasat University Lampang Campus, Thailand
+
+experiment:
+  name: "boochoo_normal_semester_lampang"
+  description: "Normal semester weekday with full class schedule and 903 agents"
+  version: "1.0"
+  created_date: "2025-01-15"
+
+# Building Configuration
+building:
+  name: "Boochoo Resolution Building"
+  idf_file: "path/to/Boochoo_Resolution_Building.idf"  # Update with actual IDF path
+  zones_config: "zones_boochoo_building.yaml"
+  total_zones: 70
+  floors: 5
+
+# Weather Data
+weather:
+  location: "Lampang, Thailand"
+  epw_file: "THA_NRG_Lampang.Airport.483280_TMYx.2009-2023.epw"  # Update with actual path
+  wmo_station: "483280"
+  climate_type: "Tropical Savanna (Aw)"
+  description: "Lampang Airport weather data 2009-2023"
+
+# Agent Configuration
+agents:
+  config_file: "agents_normal_semester.json"
+  total_agents: 903
+  agent_types:
+    - undergraduate: 650
+    - graduate: 80
+    - faculty: 60
+    - admin_staff: 40
+    - lab_technician: 20
+    - cleaner: 15
+    - security: 8
+    - visitor: 30
+
+# Simulation Parameters
+simulation:
+  steps: 288  # 24 hours at 5-minute intervals
+  start_time: "08:00"
+  end_time: "18:00"
+  timestep_minutes: 5
+  warmup_days: 7
+  simulation_days: 30  # Full month simulation
+
+# MESA Configuration
+mesa:
+  zones:
+    # Map EnergyPlus zone names to MESA agent zones
+    # Format: "MESA_Name": "EnergyPlus_IDF_Name"
+    - "Floor1 Auditorium Main": "Floor1_Auditorium_Main"
+    - "Floor1 LectureRoom A": "Floor1_LectureRoom_A"
+    - "Floor1 LectureRoom B": "Floor1_LectureRoom_B"
+    # Add all 70 zones mapping here based on actual IDF zone names
+
+# EnergyPlus Configuration
+energyplus:
+  version: "25.1.0"
+  idd_file: "Energy+.idd"  # Update with actual path
+  output_directory: "outEnergyPlus/boochoo_semester"
+  run_period:
+    begin_month: 1
+    begin_day: 1
+    end_month: 1
+    end_day: 31
+
+# Output Configuration
+output:
+  results_directory: "results/boochoo_semester_lampang"
+  save_agent_results: true
+  save_zone_results: true
+  save_energy_results: true
+  create_visualizations: true
+  export_formats: ["csv", "json"]
+
+# Analysis Metrics
+metrics:
+  comfort:
+    - average_comfort_level
+    - comfort_hours_percentage
+    - thermal_dissatisfaction_rate
+  energy:
+    - total_cooling_energy_kwh
+    - peak_cooling_demand_kw
+    - energy_per_occupant_kwh
+  occupancy:
+    - peak_occupancy_count
+    - average_occupancy_rate
+    - zone_utilization_percentage
+
+# Notes
+notes: |
+  This experiment simulates typical semester operations with full class schedules.
+  Peak occupancy occurs between 9:00-15:00 with approximately 903 agents.
+  Expected high HVAC demand in lecture rooms, auditorium, and computer labs.
+  Lampang climate (hot season) will test cooling capacity extensively.

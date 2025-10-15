@@ -1,0 +1,78 @@
+# Experiment Configuration: Boochoo Resolution Building - Conference Event
+# Scenario: Academic conference/symposium with external participants
+# Location: Thammasat University Lampang Campus, Thailand
+
+experiment:
+  name: "boochoo_conference_lampang"
+  description: "Conference event with 972 agents, over-capacity stress test"
+  version: "1.0"
+  created_date: "2025-01-15"
+
+# Building Configuration
+building:
+  name: "Boochoo Resolution Building"
+  idf_file: "path/to/Boochoo_Resolution_Building.idf"
+  zones_config: "zones_boochoo_building.yaml"
+  total_zones: 70
+  floors: 5
+
+# Weather Data
+weather:
+  location: "Lampang, Thailand"
+  epw_file: "THA_NRG_Lampang.Airport.483280_TMYx.2009-2023.epw"
+  wmo_station: "483280"
+  climate_type: "Tropical Savanna (Aw)"
+  description: "Lampang Airport weather data 2009-2023"
+
+# Agent Configuration
+agents:
+  config_file: "agents_conference.json"
+  total_agents: 972
+  agent_types:
+    - undergraduate: 200
+    - graduate: 100
+    - faculty: 80
+    - admin_staff: 50
+    - lab_technician: 5
+    - cleaner: 25
+    - security: 12
+    - visitor: 500
+
+# Simulation Parameters
+simulation:
+  steps: 288
+  start_time: "08:00"
+  end_time: "18:00"
+  timestep_minutes: 5
+  warmup_days: 3
+  simulation_days: 3  # Three-day conference
+
+# Special Occupancy Conditions
+occupancy_overrides:
+  auditorium:
+    capacity_multiplier: 1.2  # 120% of design capacity
+    notes: "Standing room utilized during keynote"
+  lecture_rooms:
+    capacity_multiplier: 0.95  # 95% capacity for parallel sessions
+  hallways:
+    capacity_multiplier: 2.0  # High traffic during breaks
+
+# Output Configuration
+output:
+  results_directory: "results/boochoo_conference_lampang"
+  save_agent_results: true
+  save_zone_results: true
+  save_energy_results: true
+  create_visualizations: true
+  export_formats: ["csv", "json"]
+  generate_heatmaps: true
+
+# Notes
+notes: |
+  High-density stress test scenario exceeding design capacity.
+  Auditorium at 120% capacity during keynote sessions.
+  Multiple parallel sessions in lecture rooms.
+  Extreme hallway congestion during session breaks.
+  HVAC system tested at maximum capacity.
+  Critical for identifying thermal comfort failures under peak load.
+  External visitors unfamiliar with building may have lower tolerance.

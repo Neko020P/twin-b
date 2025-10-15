@@ -1,0 +1,623 @@
+# Boochoo Resolution Building - Zone Configuration
+# Thammasat University Lampang Campus
+# 5-story academic building with 70 zones
+
+building:
+  name: "Boochoo Resolution Building"
+  location: "Thammasat University Lampang Campus"
+  floors: 5
+  total_zones: 70
+  total_floor_area_m2: 8500
+  construction_year: 2020
+  building_type: "University Academic Building"
+
+# Zone List - 70 zones across 5 floors
+zones:
+  # ==================== FLOOR 1 (Ground Floor) - 15 zones ====================
+  - name: "Floor1_Auditorium_Main"
+    floor: 1
+    zone_type: "auditorium"
+    capacity: 150
+    area_m2: 200
+    typical_occupancy: "high_density"
+    hvac_priority: "critical"
+    notes: "Main auditorium hall for large events and keynote sessions"
+
+  - name: "Floor1_Auditorium_Stage"
+    floor: 1
+    zone_type: "stage"
+    capacity: 10
+    area_m2: 40
+    typical_occupancy: "low"
+    hvac_priority: "moderate"
+    notes: "Stage area with lighting equipment heat loads"
+
+  - name: "Floor1_LectureRoom_A"
+    floor: 1
+    zone_type: "lecture"
+    capacity: 80
+    area_m2: 120
+    typical_occupancy: "high"
+    hvac_priority: "high"
+    notes: "Large lecture room for core undergraduate courses"
+
+  - name: "Floor1_LectureRoom_B"
+    floor: 1
+    zone_type: "lecture"
+    capacity: 80
+    area_m2: 120
+    typical_occupancy: "high"
+    hvac_priority: "high"
+    notes: "Large lecture room for core undergraduate courses"
+
+  - name: "Floor1_LectureRoom_C"
+    floor: 1
+    zone_type: "lecture"
+    capacity: 60
+    area_m2: 90
+    typical_occupancy: "high"
+    hvac_priority: "high"
+    notes: "Medium lecture room"
+
+  - name: "Floor1_LectureRoom_D"
+    floor: 1
+    zone_type: "lecture"
+    capacity: 60
+    area_m2: 90
+    typical_occupancy: "high"
+    hvac_priority: "high"
+    notes: "Medium lecture room"
+
+  - name: "Floor1_AdminOffice_Main"
+    floor: 1
+    zone_type: "office"
+    capacity: 15
+    area_m2: 60
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+    notes: "Main administrative office"
+
+  - name: "Floor1_AdminOffice_Reception"
+    floor: 1
+    zone_type: "office"
+    capacity: 8
+    area_m2: 40
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+    notes: "Reception and student services"
+
+  - name: "Floor1_AdminOffice_Records"
+    floor: 1
+    zone_type: "office"
+    capacity: 6
+    area_m2: 35
+    typical_occupancy: "low_moderate"
+    hvac_priority: "moderate"
+    notes: "Records and archives office"
+
+  - name: "Floor1_Lobby_Main"
+    floor: 1
+    zone_type: "common"
+    capacity: 100
+    area_m2: 150
+    typical_occupancy: "transient"
+    hvac_priority: "moderate"
+    notes: "Main entrance lobby"
+
+  - name: "Floor1_Lobby_Secondary"
+    floor: 1
+    zone_type: "common"
+    capacity: 50
+    area_m2: 80
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+    notes: "Secondary entrance"
+
+  - name: "Floor1_Hallway_Central"
+    floor: 1
+    zone_type: "hallway"
+    capacity: 80
+    area_m2: 120
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+    notes: "Main central corridor"
+
+  - name: "Floor1_Hallway_Wing"
+    floor: 1
+    zone_type: "hallway"
+    capacity: 40
+    area_m2: 60
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+    notes: "Wing corridor"
+
+  - name: "Floor1_Restroom_Male"
+    floor: 1
+    zone_type: "restroom"
+    capacity: 15
+    area_m2: 25
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+    notes: "Male restroom"
+
+  - name: "Floor1_Restroom_Female"
+    floor: 1
+    zone_type: "restroom"
+    capacity: 15
+    area_m2: 25
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+    notes: "Female restroom"
+
+  # ==================== FLOOR 2 (Academic Floor) - 15 zones ====================
+  - name: "Floor2_LectureRoom_A"
+    floor: 2
+    zone_type: "lecture"
+    capacity: 50
+    area_m2: 75
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor2_LectureRoom_B"
+    floor: 2
+    zone_type: "lecture"
+    capacity: 50
+    area_m2: 75
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor2_LectureRoom_C"
+    floor: 2
+    zone_type: "lecture"
+    capacity: 40
+    area_m2: 60
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor2_LectureRoom_D"
+    floor: 2
+    zone_type: "lecture"
+    capacity: 40
+    area_m2: 60
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor2_LectureRoom_E"
+    floor: 2
+    zone_type: "lecture"
+    capacity: 30
+    area_m2: 50
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor2_LectureRoom_F"
+    floor: 2
+    zone_type: "lecture"
+    capacity: 30
+    area_m2: 50
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor2_MeetingRoom_A"
+    floor: 2
+    zone_type: "meeting"
+    capacity: 15
+    area_m2: 30
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor2_MeetingRoom_B"
+    floor: 2
+    zone_type: "meeting"
+    capacity: 12
+    area_m2: 25
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor2_MeetingRoom_C"
+    floor: 2
+    zone_type: "meeting"
+    capacity: 10
+    area_m2: 20
+    typical_occupancy: "low"
+    hvac_priority: "moderate"
+
+  - name: "Floor2_FacultyOffice_A"
+    floor: 2
+    zone_type: "office"
+    capacity: 4
+    area_m2: 25
+    typical_occupancy: "low_moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor2_FacultyOffice_B"
+    floor: 2
+    zone_type: "office"
+    capacity: 4
+    area_m2: 25
+    typical_occupancy: "low_moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor2_FacultyOffice_C"
+    floor: 2
+    zone_type: "office"
+    capacity: 3
+    area_m2: 20
+    typical_occupancy: "low"
+    hvac_priority: "moderate"
+
+  - name: "Floor2_Hallway_Central"
+    floor: 2
+    zone_type: "hallway"
+    capacity: 60
+    area_m2: 100
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+
+  - name: "Floor2_Restroom_Male"
+    floor: 2
+    zone_type: "restroom"
+    capacity: 10
+    area_m2: 20
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+
+  - name: "Floor2_Restroom_Female"
+    floor: 2
+    zone_type: "restroom"
+    capacity: 10
+    area_m2: 20
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+
+  # ==================== FLOOR 3 (Academic Floor) - 15 zones ====================
+  - name: "Floor3_LectureRoom_A"
+    floor: 3
+    zone_type: "lecture"
+    capacity: 50
+    area_m2: 75
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor3_LectureRoom_B"
+    floor: 3
+    zone_type: "lecture"
+    capacity: 50
+    area_m2: 75
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor3_LectureRoom_C"
+    floor: 3
+    zone_type: "lecture"
+    capacity: 40
+    area_m2: 60
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor3_LectureRoom_D"
+    floor: 3
+    zone_type: "lecture"
+    capacity: 40
+    area_m2: 60
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor3_LectureRoom_E"
+    floor: 3
+    zone_type: "lecture"
+    capacity: 30
+    area_m2: 50
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor3_LectureRoom_F"
+    floor: 3
+    zone_type: "lecture"
+    capacity: 30
+    area_m2: 50
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor3_MeetingRoom_A"
+    floor: 3
+    zone_type: "meeting"
+    capacity: 15
+    area_m2: 30
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor3_MeetingRoom_B"
+    floor: 3
+    zone_type: "meeting"
+    capacity: 12
+    area_m2: 25
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor3_MeetingRoom_C"
+    floor: 3
+    zone_type: "meeting"
+    capacity: 10
+    area_m2: 20
+    typical_occupancy: "low"
+    hvac_priority: "moderate"
+
+  - name: "Floor3_FacultyOffice_A"
+    floor: 3
+    zone_type: "office"
+    capacity: 4
+    area_m2: 25
+    typical_occupancy: "low_moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor3_FacultyOffice_B"
+    floor: 3
+    zone_type: "office"
+    capacity: 4
+    area_m2: 25
+    typical_occupancy: "low_moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor3_FacultyOffice_C"
+    floor: 3
+    zone_type: "office"
+    capacity: 3
+    area_m2: 20
+    typical_occupancy: "low"
+    hvac_priority: "moderate"
+
+  - name: "Floor3_Hallway_Central"
+    floor: 3
+    zone_type: "hallway"
+    capacity: 60
+    area_m2: 100
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+
+  - name: "Floor3_Restroom_Male"
+    floor: 3
+    zone_type: "restroom"
+    capacity: 10
+    area_m2: 20
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+
+  - name: "Floor3_Restroom_Female"
+    floor: 3
+    zone_type: "restroom"
+    capacity: 10
+    area_m2: 20
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+
+  # ==================== FLOOR 4 (Academic Floor) - 15 zones ====================
+  - name: "Floor4_LectureRoom_A"
+    floor: 4
+    zone_type: "lecture"
+    capacity: 50
+    area_m2: 75
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor4_LectureRoom_B"
+    floor: 4
+    zone_type: "lecture"
+    capacity: 50
+    area_m2: 75
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor4_LectureRoom_C"
+    floor: 4
+    zone_type: "lecture"
+    capacity: 40
+    area_m2: 60
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor4_LectureRoom_D"
+    floor: 4
+    zone_type: "lecture"
+    capacity: 40
+    area_m2: 60
+    typical_occupancy: "high"
+    hvac_priority: "high"
+
+  - name: "Floor4_LectureRoom_E"
+    floor: 4
+    zone_type: "lecture"
+    capacity: 30
+    area_m2: 50
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor4_LectureRoom_F"
+    floor: 4
+    zone_type: "lecture"
+    capacity: 30
+    area_m2: 50
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor4_MeetingRoom_A"
+    floor: 4
+    zone_type: "meeting"
+    capacity: 15
+    area_m2: 30
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor4_MeetingRoom_B"
+    floor: 4
+    zone_type: "meeting"
+    capacity: 12
+    area_m2: 25
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor4_MeetingRoom_C"
+    floor: 4
+    zone_type: "meeting"
+    capacity: 10
+    area_m2: 20
+    typical_occupancy: "low"
+    hvac_priority: "moderate"
+
+  - name: "Floor4_FacultyOffice_A"
+    floor: 4
+    zone_type: "office"
+    capacity: 4
+    area_m2: 25
+    typical_occupancy: "low_moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor4_FacultyOffice_B"
+    floor: 4
+    zone_type: "office"
+    capacity: 4
+    area_m2: 25
+    typical_occupancy: "low_moderate"
+    hvac_priority: "moderate"
+
+  - name: "Floor4_FacultyOffice_C"
+    floor: 4
+    zone_type: "office"
+    capacity: 3
+    area_m2: 20
+    typical_occupancy: "low"
+    hvac_priority: "moderate"
+
+  - name: "Floor4_Hallway_Central"
+    floor: 4
+    zone_type: "hallway"
+    capacity: 60
+    area_m2: 100
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+
+  - name: "Floor4_Restroom_Male"
+    floor: 4
+    zone_type: "restroom"
+    capacity: 10
+    area_m2: 20
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+
+  - name: "Floor4_Restroom_Female"
+    floor: 4
+    zone_type: "restroom"
+    capacity: 10
+    area_m2: 20
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+
+  # ==================== FLOOR 5 (Labs & Special Facilities) - 10 zones ====================
+  - name: "Floor5_ComputerLab_A"
+    floor: 5
+    zone_type: "laboratory"
+    capacity: 45
+    area_m2: 90
+    typical_occupancy: "moderate_high"
+    hvac_priority: "critical"
+    notes: "Computer lab with 40+ workstations - high equipment heat load"
+
+  - name: "Floor5_ComputerLab_B"
+    floor: 5
+    zone_type: "laboratory"
+    capacity: 45
+    area_m2: 90
+    typical_occupancy: "moderate_high"
+    hvac_priority: "critical"
+    notes: "Computer lab with 40+ workstations - high equipment heat load"
+
+  - name: "Floor5_ComputerLab_C"
+    floor: 5
+    zone_type: "laboratory"
+    capacity: 30
+    area_m2: 60
+    typical_occupancy: "moderate"
+    hvac_priority: "high"
+    notes: "Computer lab for specialized courses"
+
+  - name: "Floor5_ScienceLab_Physics"
+    floor: 5
+    zone_type: "laboratory"
+    capacity: 25
+    area_m2: 70
+    typical_occupancy: "moderate"
+    hvac_priority: "high"
+    notes: "Physics laboratory with experiment equipment"
+
+  - name: "Floor5_ScienceLab_Chemistry"
+    floor: 5
+    zone_type: "laboratory"
+    capacity: 25
+    area_m2: 70
+    typical_occupancy: "moderate"
+    hvac_priority: "critical"
+    notes: "Chemistry lab requires enhanced ventilation"
+
+  - name: "Floor5_ScienceLab_Biology"
+    floor: 5
+    zone_type: "laboratory"
+    capacity: 25
+    area_m2: 70
+    typical_occupancy: "moderate"
+    hvac_priority: "high"
+    notes: "Biology laboratory"
+
+  - name: "Floor5_ScienceLab_General"
+    floor: 5
+    zone_type: "laboratory"
+    capacity: 20
+    area_m2: 60
+    typical_occupancy: "low_moderate"
+    hvac_priority: "high"
+    notes: "General science laboratory"
+
+  - name: "Floor5_ResearchMeeting_A"
+    floor: 5
+    zone_type: "meeting"
+    capacity: 20
+    area_m2: 40
+    typical_occupancy: "moderate"
+    hvac_priority: "moderate"
+    notes: "Research meeting and collaboration room"
+
+  - name: "Floor5_ResearchMeeting_B"
+    floor: 5
+    zone_type: "meeting"
+    capacity: 15
+    area_m2: 30
+    typical_occupancy: "low_moderate"
+    hvac_priority: "moderate"
+    notes: "Graduate student research meeting room"
+
+  - name: "Floor5_Restroom_Unisex"
+    floor: 5
+    zone_type: "restroom"
+    capacity: 10
+    area_m2: 20
+    typical_occupancy: "transient"
+    hvac_priority: "low"
+
+# Zone Type Summary
+zone_type_summary:
+  auditorium: 2
+  lecture: 24
+  laboratory: 7
+  meeting: 11
+  office: 15
+  hallway: 4
+  common: 2
+  restroom: 9
+  stage: 1
+  total: 70
+
+# HVAC Priority Zones
+hvac_priorities:
+  critical: ["Floor1_Auditorium_Main", "Floor5_ComputerLab_A", "Floor5_ComputerLab_B", "Floor5_ScienceLab_Chemistry"]
+  high: ["All lecture rooms", "All laboratories except listed as critical"]
+  moderate: ["All meeting rooms", "All offices"]
+  low: ["All hallways", "All restrooms", "Common areas"]

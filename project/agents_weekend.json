@@ -1,0 +1,222 @@
+{
+  "building_info": {
+    "name": "Boochoo Resolution Building",
+    "location": "Thammasat University Lampang Campus",
+    "floors": 5,
+    "total_zones": 70,
+    "scenario": "Weekend Low Occupancy",
+    "description": "Saturday-Sunday operations with minimal academic activity, primarily self-study and research"
+  },
+  "agent_types": {
+    "undergraduate": {
+      "distribution": {
+        "count": 80,
+        "gender_ratio": {"female": 0.55, "male": 0.45},
+        "age_range": [18, 23]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 24.5,
+          "std_dev": 1.2
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.5,
+          "max": 2.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "self_study_groups",
+        "device_usage_pattern": "continuous"
+      },
+      "schedule_template": "weekend_study"
+    },
+    "graduate": {
+      "distribution": {
+        "count": 50,
+        "gender_ratio": {"female": 0.48, "male": 0.52},
+        "age_range": [23, 35]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.0,
+          "std_dev": 1.2
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "research_based",
+        "device_usage_pattern": "continuous",
+        "notes": "Graduate research continues on weekends"
+      },
+      "schedule_template": "weekend_research"
+    },
+    "faculty": {
+      "distribution": {
+        "count": 10,
+        "gender_ratio": {"female": 0.45, "male": 0.55},
+        "age_range": [30, 65]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 1.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "office_work",
+        "device_usage_pattern": "intermittent"
+      },
+      "schedule_template": "weekend_optional"
+    },
+    "admin_staff": {
+      "distribution": {
+        "count": 5,
+        "gender_ratio": {"female": 0.60, "male": 0.40},
+        "age_range": [25, 60]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.5,
+          "std_dev": 0.8
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "minimal_office",
+        "device_usage_pattern": "intermittent"
+      },
+      "schedule_template": "weekend_duty"
+    },
+    "lab_technician": {
+      "distribution": {
+        "count": 8,
+        "gender_ratio": {"female": 0.40, "male": 0.60},
+        "age_range": [25, 55]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 24.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.0,
+          "max": 3.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "equipment_monitoring",
+        "device_usage_pattern": "work_hours"
+      },
+      "schedule_template": "weekend_lab_check"
+    },
+    "cleaner": {
+      "distribution": {
+        "count": 20,
+        "gender_ratio": {"female": 0.65, "male": 0.35},
+        "age_range": [25, 60]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 27.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.5,
+          "max": 3.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "high",
+        "movement_pattern": "deep_cleaning",
+        "device_usage_pattern": "low",
+        "notes": "Weekend is ideal for thorough deep cleaning operations"
+      },
+      "schedule_template": "weekend_deep_clean"
+    },
+    "security": {
+      "distribution": {
+        "count": 6,
+        "gender_ratio": {"female": 0.25, "male": 0.75},
+        "age_range": [25, 55]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 26.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.0,
+          "max": 3.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "patrol_route",
+        "device_usage_pattern": "monitoring"
+      },
+      "schedule_template": "weekend_patrol"
+    },
+    "visitor": {
+      "distribution": {
+        "count": 10,
+        "gender_ratio": {"female": 0.50, "male": 0.50},
+        "age_range": [20, 70]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.0,
+          "std_dev": 1.5
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "campus_tour",
+        "device_usage_pattern": "short_stay",
+        "notes": "Family campus tours, prospective students"
+      },
+      "schedule_template": "weekend_visitor"
+    }
+  },
+  "metadata": {
+    "total_agents": 189,
+    "created_for": "Boochoo Resolution Building Co-Simulation",
+    "climate": "Lampang, Thailand (Tropical Savanna)",
+    "version": "1.0",
+    "notes": "Low occupancy baseline scenario. Opportunity for building energy savings while maintaining minimal comfort for research and maintenance staff."
+  }
+}

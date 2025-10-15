@@ -1,0 +1,64 @@
+# Experiment Configuration: Boochoo Resolution Building - Weekend
+# Scenario: Saturday-Sunday low occupancy operations
+# Location: Thammasat University Lampang Campus, Thailand
+
+experiment:
+  name: "boochoo_weekend_lampang"
+  description: "Weekend low occupancy with 189 agents, primarily research and maintenance"
+  version: "1.0"
+  created_date: "2025-01-15"
+
+# Building Configuration
+building:
+  name: "Boochoo Resolution Building"
+  idf_file: "path/to/Boochoo_Resolution_Building.idf"
+  zones_config: "zones_boochoo_building.yaml"
+  total_zones: 70
+  floors: 5
+
+# Weather Data
+weather:
+  location: "Lampang, Thailand"
+  epw_file: "THA_NRG_Lampang.Airport.483280_TMYx.2009-2023.epw"
+  wmo_station: "483280"
+  climate_type: "Tropical Savanna (Aw)"
+  description: "Lampang Airport weather data 2009-2023"
+
+# Agent Configuration
+agents:
+  config_file: "agents_weekend.json"
+  total_agents: 189
+  agent_types:
+    - undergraduate: 80
+    - graduate: 50
+    - faculty: 10
+    - admin_staff: 5
+    - lab_technician: 8
+    - cleaner: 20
+    - security: 6
+    - visitor: 10
+
+# Simulation Parameters
+simulation:
+  steps: 288
+  start_time: "09:00"
+  end_time: "17:00"
+  timestep_minutes: 5
+  warmup_days: 7
+  simulation_days: 8  # Four weekends
+
+# Output Configuration
+output:
+  results_directory: "results/boochoo_weekend_lampang"
+  save_agent_results: true
+  save_zone_results: true
+  save_energy_results: true
+  create_visualizations: true
+  export_formats: ["csv", "json"]
+
+# Notes
+notes: |
+  Low occupancy baseline scenario for energy savings analysis.
+  Graduate research continues on weekends.
+  Deep cleaning operations ideal for weekend scheduling.
+  Opportunity to test setback temperature strategies.

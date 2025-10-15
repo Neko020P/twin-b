@@ -1,0 +1,248 @@
+{
+  "building_info": {
+    "name": "Boochoo Resolution Building",
+    "location": "Thammasat University Lampang Campus",
+    "floors": 5,
+    "total_zones": 70,
+    "scenario": "Conference/Symposium Event",
+    "description": "Academic conference or symposium with external participants, parallel sessions, and high-density occupancy"
+  },
+  "agent_types": {
+    "undergraduate": {
+      "distribution": {
+        "count": 200,
+        "gender_ratio": {"female": 0.55, "male": 0.45},
+        "age_range": [18, 23]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 24.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.5,
+          "max": 2.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "event_attendee",
+        "device_usage_pattern": "intermittent",
+        "notes": "Student volunteers and attendees"
+      },
+      "schedule_template": "conference_attendee"
+    },
+    "graduate": {
+      "distribution": {
+        "count": 100,
+        "gender_ratio": {"female": 0.48, "male": 0.52},
+        "age_range": [23, 35]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.0,
+          "std_dev": 1.2
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low_moderate",
+        "movement_pattern": "presenter_attendee",
+        "device_usage_pattern": "continuous",
+        "notes": "Presenting research, attending sessions"
+      },
+      "schedule_template": "conference_presenter"
+    },
+    "faculty": {
+      "distribution": {
+        "count": 80,
+        "gender_ratio": {"female": 0.45, "male": 0.55},
+        "age_range": [30, 65]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 1.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "low_moderate",
+        "movement_pattern": "organizer_presenter",
+        "device_usage_pattern": "continuous",
+        "notes": "Event organizers, session chairs, keynote speakers"
+      },
+      "schedule_template": "conference_organizer"
+    },
+    "admin_staff": {
+      "distribution": {
+        "count": 50,
+        "gender_ratio": {"female": 0.60, "male": 0.40},
+        "age_range": [25, 60]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.5,
+          "std_dev": 0.8
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate_high",
+        "movement_pattern": "event_coordination",
+        "device_usage_pattern": "continuous",
+        "notes": "Registration, AV support, logistics management"
+      },
+      "schedule_template": "conference_support"
+    },
+    "lab_technician": {
+      "distribution": {
+        "count": 5,
+        "gender_ratio": {"female": 0.40, "male": 0.60},
+        "age_range": [25, 55]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 24.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.0,
+          "max": 3.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate_high",
+        "movement_pattern": "av_technical_support",
+        "device_usage_pattern": "work_hours",
+        "notes": "AV equipment setup and troubleshooting"
+      },
+      "schedule_template": "conference_tech"
+    },
+    "cleaner": {
+      "distribution": {
+        "count": 25,
+        "gender_ratio": {"female": 0.65, "male": 0.35},
+        "age_range": [25, 60]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 27.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.5,
+          "max": 3.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "high",
+        "movement_pattern": "rapid_turnover",
+        "device_usage_pattern": "low",
+        "notes": "Session turnover cleaning, restroom maintenance"
+      },
+      "schedule_template": "conference_cleaning"
+    },
+    "security": {
+      "distribution": {
+        "count": 12,
+        "gender_ratio": {"female": 0.25, "male": 0.75},
+        "age_range": [25, 55]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 26.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.0,
+          "max": 3.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate_high",
+        "movement_pattern": "crowd_management",
+        "device_usage_pattern": "monitoring",
+        "notes": "Crowd control, entrance monitoring, emergency response"
+      },
+      "schedule_template": "conference_security"
+    },
+    "visitor": {
+      "distribution": {
+        "count": 500,
+        "gender_ratio": {"female": 0.50, "male": 0.50},
+        "age_range": [25, 70]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.0,
+          "std_dev": 1.5
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low_moderate",
+        "movement_pattern": "conference_circulation",
+        "device_usage_pattern": "continuous",
+        "notes": "External conference attendees from other universities, industry, government"
+      },
+      "schedule_template": "conference_external"
+    }
+  },
+  "occupancy_zones": {
+    "auditorium": {
+      "capacity": 150,
+      "typical_occupancy_percent": 120,
+      "notes": "Over-capacity during keynote sessions, standing room utilized"
+    },
+    "large_lecture_rooms": {
+      "capacity": 60,
+      "typical_occupancy_percent": 95,
+      "notes": "Parallel sessions running simultaneously"
+    },
+    "medium_lecture_rooms": {
+      "capacity": 40,
+      "typical_occupancy_percent": 90,
+      "notes": "Breakout sessions and workshops"
+    },
+    "hallways_common_areas": {
+      "typical_occupancy_percent": 200,
+      "notes": "High traffic during session breaks, poster sessions"
+    }
+  },
+  "metadata": {
+    "total_agents": 972,
+    "created_for": "Boochoo Resolution Building Co-Simulation",
+    "climate": "Lampang, Thailand (Tropical Savanna)",
+    "version": "1.0",
+    "notes": "High-density stress test scenario. Auditorium and lecture halls exceed design capacity. High hallway congestion during breaks. HVAC system at maximum capacity. Critical test for thermal comfort under extreme occupancy."
+  }
+}

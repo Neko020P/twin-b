@@ -1,0 +1,225 @@
+{
+  "building_info": {
+    "name": "Boochoo Resolution Building",
+    "location": "Thammasat University Lampang Campus",
+    "floors": 5,
+    "total_zones": 70,
+    "scenario": "Summer Break Minimal Operations",
+    "description": "June-August period with minimal academic activity, primarily research and facility maintenance"
+  },
+  "agent_types": {
+    "undergraduate": {
+      "distribution": {
+        "count": 30,
+        "gender_ratio": {"female": 0.55, "male": 0.45},
+        "age_range": [18, 23]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 24.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.5,
+          "max": 2.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "summer_classes",
+        "device_usage_pattern": "intermittent",
+        "notes": "Only students taking summer courses"
+      },
+      "schedule_template": "summer_course"
+    },
+    "graduate": {
+      "distribution": {
+        "count": 40,
+        "gender_ratio": {"female": 0.48, "male": 0.52},
+        "age_range": [23, 35]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.0,
+          "std_dev": 1.2
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "research_intensive",
+        "device_usage_pattern": "continuous",
+        "notes": "Research activities peak during summer break"
+      },
+      "schedule_template": "summer_research"
+    },
+    "faculty": {
+      "distribution": {
+        "count": 15,
+        "gender_ratio": {"female": 0.45, "male": 0.55},
+        "age_range": [30, 65]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 1.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "research_writing",
+        "device_usage_pattern": "continuous",
+        "notes": "Research, paper writing, grant preparation"
+      },
+      "schedule_template": "summer_faculty"
+    },
+    "admin_staff": {
+      "distribution": {
+        "count": 20,
+        "gender_ratio": {"female": 0.60, "male": 0.40},
+        "age_range": [25, 60]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.5,
+          "std_dev": 0.8
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "year_round_operations",
+        "device_usage_pattern": "continuous",
+        "notes": "Administrative operations continue year-round"
+      },
+      "schedule_template": "office_hours"
+    },
+    "lab_technician": {
+      "distribution": {
+        "count": 10,
+        "gender_ratio": {"female": 0.40, "male": 0.60},
+        "age_range": [25, 55]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 24.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.0,
+          "max": 3.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "equipment_maintenance",
+        "device_usage_pattern": "work_hours",
+        "notes": "Equipment calibration, preventive maintenance"
+      },
+      "schedule_template": "summer_maintenance"
+    },
+    "cleaner": {
+      "distribution": {
+        "count": 15,
+        "gender_ratio": {"female": 0.65, "male": 0.35},
+        "age_range": [25, 60]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 27.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.5,
+          "max": 3.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "high",
+        "movement_pattern": "comprehensive_maintenance",
+        "device_usage_pattern": "low",
+        "notes": "Major facility maintenance and renovation support"
+      },
+      "schedule_template": "summer_facility_work"
+    },
+    "security": {
+      "distribution": {
+        "count": 6,
+        "gender_ratio": {"female": 0.25, "male": 0.75},
+        "age_range": [25, 55]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 26.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.0,
+          "max": 3.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "patrol_route",
+        "device_usage_pattern": "monitoring"
+      },
+      "schedule_template": "security_patrol"
+    },
+    "visitor": {
+      "distribution": {
+        "count": 5,
+        "gender_ratio": {"female": 0.50, "male": 0.50},
+        "age_range": [20, 70]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.0,
+          "std_dev": 1.5
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "visitor_pattern",
+        "device_usage_pattern": "short_stay"
+      },
+      "schedule_template": "visitor_pattern"
+    }
+  },
+  "metadata": {
+    "total_agents": 141,
+    "created_for": "Boochoo Resolution Building Co-Simulation",
+    "climate": "Lampang, Thailand (Tropical Savanna)",
+    "version": "1.0",
+    "notes": "Minimal occupancy scenario during summer break (June-August). Maximum opportunity for energy conservation strategies. Peak outdoor temperatures in Lampang make HVAC efficiency critical."
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "building_info": {
+    "name": "Boochoo Resolution Building",
+    "location": "Thammasat University Lampang Campus",
+    "floors": 5,
+    "total_zones": 70,
+    "scenario": "Normal Semester Weekday",
+    "description": "Typical Monday-Friday operations during academic semester with full class schedule"
+  },
+  "agent_types": {
+    "undergraduate": {
+      "distribution": {
+        "count": 650,
+        "gender_ratio": {"female": 0.55, "male": 0.45},
+        "age_range": [18, 23]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 24.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.5,
+          "max": 2.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "class_schedule",
+        "device_usage_pattern": "intermittent"
+      },
+      "schedule_template": "undergraduate_classes"
+    },
+    "graduate": {
+      "distribution": {
+        "count": 80,
+        "gender_ratio": {"female": 0.48, "male": 0.52},
+        "age_range": [23, 35]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.0,
+          "std_dev": 1.2
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "research_based",
+        "device_usage_pattern": "continuous"
+      },
+      "schedule_template": "graduate_research"
+    },
+    "faculty": {
+      "distribution": {
+        "count": 60,
+        "gender_ratio": {"female": 0.45, "male": 0.55},
+        "age_range": [30, 65]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 1.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "low_moderate",
+        "movement_pattern": "teaching_office",
+        "device_usage_pattern": "continuous"
+      },
+      "schedule_template": "faculty_teaching"
+    },
+    "admin_staff": {
+      "distribution": {
+        "count": 40,
+        "gender_ratio": {"female": 0.60, "male": 0.40},
+        "age_range": [25, 60]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.5,
+          "std_dev": 0.8
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "low",
+        "movement_pattern": "stationary_office",
+        "device_usage_pattern": "continuous"
+      },
+      "schedule_template": "office_hours"
+    },
+    "lab_technician": {
+      "distribution": {
+        "count": 20,
+        "gender_ratio": {"female": 0.40, "male": 0.60},
+        "age_range": [25, 55]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 24.5,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.0,
+          "max": 3.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate_high",
+        "movement_pattern": "laboratory_support",
+        "device_usage_pattern": "work_hours"
+      },
+      "schedule_template": "lab_support"
+    },
+    "cleaner": {
+      "distribution": {
+        "count": 15,
+        "gender_ratio": {"female": 0.65, "male": 0.35},
+        "age_range": [25, 60]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 27.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.5,
+          "max": 3.5
+        }
+      },
+      "behaviors": {
+        "activity_level": "high",
+        "movement_pattern": "cyclic_route",
+        "device_usage_pattern": "low"
+      },
+      "schedule_template": "cleaning_shifts"
+    },
+    "security": {
+      "distribution": {
+        "count": 8,
+        "gender_ratio": {"female": 0.25, "male": 0.75},
+        "age_range": [25, 55]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 26.0,
+          "std_dev": 1.0
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 2.0,
+          "max": 3.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "patrol_route",
+        "device_usage_pattern": "monitoring"
+      },
+      "schedule_template": "security_patrol"
+    },
+    "visitor": {
+      "distribution": {
+        "count": 30,
+        "gender_ratio": {"female": 0.50, "male": 0.50},
+        "age_range": [20, 70]
+      },
+      "attributes": {
+        "preferred_temp": {
+          "distribution": "normal",
+          "mean": 25.0,
+          "std_dev": 1.5
+        },
+        "comfort_tolerance": {
+          "distribution": "uniform",
+          "min": 1.0,
+          "max": 2.0
+        }
+      },
+      "behaviors": {
+        "activity_level": "moderate",
+        "movement_pattern": "visitor_pattern",
+        "device_usage_pattern": "short_stay"
+      },
+      "schedule_template": "visitor_pattern"
+    }
+  },
+  "metadata": {
+    "total_agents": 903,
+    "created_for": "Boochoo Resolution Building Co-Simulation",
+    "climate": "Lampang, Thailand (Tropical Savanna)",
+    "version": "1.0",
+    "notes": "Agent counts scaled for 70-zone, 5-story university building during peak semester operations"
+  }
+}
